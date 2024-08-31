@@ -5,6 +5,14 @@ import (
 	"sync"
 )
 
+func MaxInt(a, b int) int {
+	if a >= b {
+		return a
+	}
+
+	return b
+}
+
 func main() {
 	var wg sync.WaitGroup
 	wg.Add(5)
@@ -17,12 +25,4 @@ func main() {
 	}
 
 	wg.Wait()
-}
-
-func MaxInt(a, b int) int {
-	if a >= b {
-		return a
-	}
-
-	return b
 }
